@@ -17,7 +17,7 @@ import {
   zoomToBox
 } from "@corpsmap/corpsmap";
 import "@corpsmap/corpsmap/css/corpsmap.css";
-
+import gpg from '../../cm-plugins/geopkg/index'
 class MapPage extends React.Component {
   render(){
     return (
@@ -37,7 +37,8 @@ class MapPage extends React.Component {
                 rotateNorth,
                 zoomInOut,
                 zoomHome,
-                zoomToBox
+                zoomToBox,
+                gpg()
               ]}
             />        
         </div>
