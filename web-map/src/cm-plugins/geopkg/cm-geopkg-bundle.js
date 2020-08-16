@@ -3,10 +3,9 @@ const GEOPKG_INITALIZE_START='GEOPKG_INITALIZE_START';
 const GEOPKG_INITALIZE_END='GEOPKG_INITALIZE_END';
 const MAP_INITIALIZED='MAP_INITIALIZED';
 
-const getBundle=function(){
-  return({
+export default {
     name:'geopkg',
-    getReducer: () => {
+    getReducer() {
       const initialData = {
         _shouldInitialize: false,
       };
@@ -36,12 +35,7 @@ const getBundle=function(){
     reactAepShouldInitialize: (state) => {
       if(state.geopkg._shouldInitialize) return { actionCreator: "doGeoPkgInitialize" };
     }
-  })
 }
-
-export {getBundle as default}
-
-
 const initMap=function(store){
   const map = store.selectMap();
   console.log(map)

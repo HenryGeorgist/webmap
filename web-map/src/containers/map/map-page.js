@@ -38,7 +38,7 @@ class MapPage extends React.Component {
                 zoomInOut,
                 zoomHome,
                 zoomToBox,
-                gpg()
+                gpg
               ]}
             />        
         </div>
